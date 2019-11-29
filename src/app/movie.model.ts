@@ -1,5 +1,5 @@
 export interface Movie {
-    title: string;
-    year: string;
-    poster: string;
+    Title: String;
+    Year: String;
+    Poster: String;
   }

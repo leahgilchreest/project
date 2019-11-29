@@ -7,15 +7,18 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+
+
 <mat-toolbar color="primary"> 
   <mat-toolbar-row>
           <span class="title-center">
-      My single page application
+      My Movie App 
   </span>
     </mat-toolbar-row>
     <mat-toolbar-row>
-<button mat-button [routerLink]="['/create']" color="Warn">Create</button>
-<button mat-button [routerLink]="['/read']">Read</button>
+ <button mat-button [routerLink]="['/home-page']" color="Warn">Home</button>
+<button mat-button [routerLink]="['/create']" color="Warn">Add New Movie</button>
+<button mat-button [routerLink]="['/read']"> View Movie </button>
 </mat-toolbar-row>
 </mat-toolbar>
 
