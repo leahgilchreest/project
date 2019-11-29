@@ -91,7 +91,7 @@ app.post('/api/movies', (req,res) =>{
     console.log(req.body.Poster);
 
 
-    DriverModel.create({
+    MovieModel.create({
         Title:req.body.Title,
         Year:req.body.Year,
         Poster:req.body.Poster

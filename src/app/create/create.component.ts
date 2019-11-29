@@ -14,7 +14,7 @@ export class CreateComponent implements OnInit {
 
   ngOnInit() {
   }
-  myDate : Date;
+  
   onAddMovie(form: NgForm) {
     
     if(!form.valid)
@@ -23,19 +23,16 @@ export class CreateComponent implements OnInit {
     }
 
     console.log(form.value);
-    console.log(form.value.date);
-    this.myDate = new Date(form.value.date);
-    console.log(this.myDate);
 
-    this.movieService.SendMovieInformation(form.value.title,
-      form.value.year, form.value.poster).subscribe(
+    this.movieService.SendMovieInformation(form.value.Title,
+      form.value.Year, form.value.Poster).subscribe(
         ()=>{
           //do something after out operation has finished
         }
       );
+
     console.log(form.value);
     form.resetForm();
   }
 
 }
-
