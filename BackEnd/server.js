@@ -67,7 +67,7 @@ app.get('/api/dogs', (req, res,next) => {
  
     console.log ("get request") 
     DogModel.find((err,data) =>{
-        res.json({drivers:data});
+        res.json({dogs:data});
     })   
     })
 

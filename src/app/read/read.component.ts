@@ -3,7 +3,7 @@ import { DogServiceService } from '../Services/dog-service.service';
 import {Router,ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-read-dog',
+  selector: 'app-read',
   templateUrl: './read.component.html',
   styleUrls: ['./read.component.css']
 })
