@@ -5,25 +5,21 @@
     <img src={{movie.Poster}}>
   </li>
 </ul> -->
-
-<mat-accordion *ngFor="let movie of MyMovies">
+<mat-accordion *ngFor="let dog of MyDogs">
   <mat-expansion-panel [expanded]="true" >
   <mat-expansion-panel-header>
   <mat-panel-title>
-  <h3> {{ movie.title }} </h3>
+  <h3> {{ dog.Name }} </h3>
   </mat-panel-title>
   <mat-panel-description>
-  <h3>{{ movie.year }}</h3>
+  <h3>{{ dog.Breed  }}</h3>
   </mat-panel-description>
   </mat-expansion-panel-header>
-  <img src="{{movie.poster}}">
+  <h3>{{dog.Colour}}</h3>
   <mat-action-row>
-<button mat-button [routerLink]="['/edit', movie._id]" color="primary">EDIT</button>
-  
-  <button mat-button (click)="onDelete(movie._id)" color="warn">DELETE</button>
+  <button mat-button [routerLink]="['/edit', dog._id]" color="primary">EDIT</button>
+  <button mat-button (click) = "onDelete(dog._id)" color="warn">DELETE</button>
+
   </mat-action-row>
   </mat-expansion-panel>
   </mat-accordion>
-
-
-  

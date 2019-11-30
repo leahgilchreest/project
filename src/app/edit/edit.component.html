@@ -1,38 +1,39 @@
 <mat-card>
-    <form (submit)="onEditMovie(movieForm)" #movieForm="ngForm">
-      <mat-form-field>
-          <label> Movie Title</label>
-        <input
-          matInput
-          type="text"
-          name="title"
-          ngModel={{movie.title}}
-          required
-          #title="ngModel">
-      </mat-form-field>
-      <mat-form-field>
-          <label>Movie Year</label>
-        <textarea
-          matInput
-          name="year"
-          ngModel={{movie.year}}
-          required
-          #content="ngModel"></textarea>
-      </mat-form-field>
-      <mat-form-field>
-          <label>Movie Poster</label>
-        <textarea
-          matInput
-         rows="4"
-          name="poster"
-          ngModel={{movie.poster}}
-          required
-          #content="ngModel"></textarea>
-      </mat-form-field>
-      <button
-        mat-raised-button
-        color="accent"
-        type="submit">Edit Movie</button>
-    </form>
-  </mat-card>
+  <form (submit)="onEditDog(dogForm)" #dogForm="ngForm">
+    <mat-form-field>
+        <label> Dog Name</label>
+      <input
+        matInput
+        type="text"
+        name="Name"
+        ngModel={{dog.Name}}
+        required
+        #title="ngModel">
+    </mat-form-field>
+    <mat-form-field>
+        <label>Dog Team</label>
+      <textarea
+        matInput
+        name="Breed"
+        ngModel={{dog.Breed}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <label>Dog Colour</label>
+      <textarea
+        matInput
+       rows="4"
+        name="Colour"
+        ngModel={{dog.Colour}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Edit Dog</button>
+  </form>
+</mat-card>
+
 

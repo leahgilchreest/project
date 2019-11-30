@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 //import { RouterModule, Routes} from '@angular/router';
-import {ReadComponent} from './read/read.component'
+import { ReadComponent} from './read/read.component'
 import {CreateComponent} from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { HomePageComponent } from 'src/app/home-page/home-page.component';
@@ -12,7 +12,7 @@ const routes: Routes = [
     component: ReadComponent
   },
   {
-    path:'',
+    path:'home-page',
     component: HomePageComponent
   },
   {

@@ -1,49 +1,39 @@
 <mat-card>
-    <form (submit)="onAddMovie(movieForm)" #movieForm="ngForm">
-      <mat-form-field>
-          <label> Movie Title</label>
-        <input
-          matInput
-          type="text"
-          name="title"
-          ngModel
-          required
-          #title="ngModel">
-      </mat-form-field>
-      <mat-form-field>
-          <label>Movie Year</label>
-        <textarea
-          matInput
-          name="year"
-          ngModel
-          required
-          #content="ngModel"></textarea>
-      </mat-form-field>
-      <mat-form-field>
-          <label>Movie Poster</label>
-        <textarea
-          matInput
-         rows="4"
-          name="poster"
-          ngModel
-          required
-          #content="ngModel"></textarea>
-      </mat-form-field>
-     <!--<mat-form-field>
-        <input  
-        matInput 
-        name="date" 
+  <form (submit)="onAddDog(dogForm)" #dogForm="ngForm">
+    <mat-form-field>
+        <label> Dog Name</label>
+      <input
+        matInput
+        type="text"
+        name="Name"
         ngModel
-        [matDatepicker]="picker" 
-        placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-        
-      </mat-form-field>-->
-      <button
-        mat-raised-button
-        color="accent"
-        type="submit">Save Movie</button>
-    </form>
-  </mat-card>
+        required
+        #title="ngModel">
+    </mat-form-field>
+    <mat-form-field>
+        <label>Dog Breed</label>
+      <textarea
+        matInput
+        name="Breed"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <label>Dog Colour</label>
+      <textarea
+        matInput
+       rows="4"
+        name="Colour"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Dog</button>
+  </form>
+</mat-card>
+
 

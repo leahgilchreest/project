@@ -1,38 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
-import { MovieServiceService } from '../Services/movie-service.service';
-
-
+import { DogServiceService } from '../Services/dog-service.service';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
+  
 
-  constructor(private movieService: MovieServiceService) { }
+  constructor(private DogService:DogServiceService) { }
 
   ngOnInit() {
   }
+
+  onAddDog(form: NgForm) {
+    console.log(form.value);
+    this.DogService.SendDogInformation(form.value.Name,form.value.Breed, form.value.Colour).subscribe();
   
-  onAddMovie(form: NgForm) {
-    
-    if(!form.valid)
-    {
-      return;
-    }
-
-    console.log(form.value);
-
-    this.movieService.SendMovieInformation(form.value.Title,
-      form.value.Year, form.value.Poster).subscribe(
-        ()=>{
-          //do something after out operation has finished
-        }
-      );
-
-    console.log(form.value);
     form.resetForm();
-  }
-
+    }
 }
+
