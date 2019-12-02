@@ -15,9 +15,19 @@ export class CreateComponent implements OnInit {
   }
 
   onAddDog(form: NgForm) {
+
+    if(!form.valid) 
+      {
+        return;
+      }
+
     console.log(form.value);
-    this.DogService.SendDogInformation(form.value.Name,form.value.Breed, form.value.Colour).subscribe();
-  
+
+    this.DogService.AddDogInformation(form.value.Name,form.value.Breed, form.value.Colour).subscribe(
+      ()=>{
+      }
+    );
+      console.log(form.value);
     form.resetForm();
     }
 }

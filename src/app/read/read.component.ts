@@ -20,7 +20,11 @@ export class ReadComponent implements OnInit {
 
   onDelete(id:String){
     console.log("Deleting dog with id:" +id);
-    this.dogService.DeleteDog(id).subscribe();
+    this.dogService.DeleteDog(id).subscribe(
+      ()=>{
+        this.ngOnInit();
+      }
+    );
     }
 
 
